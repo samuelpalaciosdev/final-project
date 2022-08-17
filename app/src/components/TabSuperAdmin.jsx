@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
-import ServiceCard from './ServiceCard';
+
 import '../styles/TabSuperAdmin.css';
 
 function TabSuperAdmin() {
@@ -54,41 +54,40 @@ function TabSuperAdmin() {
                         <table className="table table-borderer table-sm">
                             <thead>
                                 <tr
-                                    style={{ backgroundColor: "#e8ffeb" }}>
+                                    style={{backgroundColor: "#e8ffeb"  }}>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }}>#Cita</th>
+                                    className="th p-2">#Cita</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000" }}>Especialista</th>
+                                    className="th p-2">Especialista</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000" }}>Paciente</th>
+                                    className="th p-2">Paciente</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000" }}>Cita</th>
+                                    className="th p-2">Cita</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000" }}>Estado de cita</th>
+                                    className="th p-2">Estado de cita</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000" }} >Pago</th>
+                                    className="th p-2" >Pago</th>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }} ><i className="fa-solid fa-pen-to-square"></i> <i className="fa-solid fa-trash-can"></i> </th>
+                                    className="th p-2" ><i className="fa-solid fa-pen-to-square"></i> <i className="fa-solid fa-trash-can"></i> </th>
                                 </tr>
                             </thead>
                             <tbody className="table-group-divider"
                                 style={{ fontSize: "13px" }}>
                                 <tr>
-                                    <th scope="row"
-                                        style={{ border: "1px solid #000" }}>#5666</th>
+                                    <td scope="row"
+                                    className="td p-2">#5666</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Juanín Juan Harry</td>
+                                    className="td p-2">Juanín Juan Harry</td>
+                                    <td 
+                                    className="td p-2">Joe Opino</td>
+                                    <td 
+                                    className="td p-2">13 de Agosto, 2022. 10:00 hrs</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Joe Opino</td>
+                                    className="td p-2">Realizado</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>13 de Agosto, 2022. 10:00 hrs</td>
+                                    className="td p-2">Realizado</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Realizado</td>
-
-                                    <td
-                                        style={{ border: "1px solid #000" }}>Realizado</td>
-                                    <td
-                                        style={{ border: "1px solid #000" }}>
+                                    className="td p-2">
                                         <div>
                                             <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
                                             <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
@@ -109,39 +108,38 @@ function TabSuperAdmin() {
                                 <tr
                                     style={{ backgroundColor: "#bcbbf8" }}>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000", padding: "5px 10px" }}>ID</th>
+                                    className="th p-2">ID</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000", padding: "5px 10px" }}>Especialista</th>
+                                    className="th p-2">Especialista</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000", padding: "5px 10px" }}>Especialidad</th>
+                                    className="th p-2">Especialidad</th>
                                     <th scope="col"
-                                        style={{ width: "10%", border: "1px solid #000", padding: "5px 10px" }}>Código título</th>
+                                    className="th p-2">Código título</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000", padding: "5px 10px" }}>Datos generales</th>
+                                    className="th p-2">Datos generales</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000", padding: "5px 10px" }} >Tarifa</th>
+                                    className="th p-2">Tarifa</th>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000", padding: "5px 10px" }} ><i className="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i></th>
+                                    className="th p-2"><i className="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i></th>
                                 </tr>
                             </thead>
                             <tbody className="table-group-divider"
                                 style={{ fontSize: "13px" }}>
                                 <tr>
-                                    <th scope="row"
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>#4567</th>
+                                    <td scope="row"
+                                    className="td p-2">#4567</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>Juan Bodoque</td>
+                                    className="td p-2">Juan Bodoque</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>Psicólogo</td>
+                                    className="td p-2">Psicólogo</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>#85494b8</td>
-
+                                    className="td p-2">#85494b8</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>Enfoque psicoanalista</td>
+                                    className="td p-2">Enfoque psicoanalista</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>$45.000 por sesión</td>
+                                    className="td p-2">$45.000 por sesión</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>
+                                    className="td p-2">
                                         <div>
                                             <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
 
@@ -152,20 +150,20 @@ function TabSuperAdmin() {
                                 </tr>
 
                                 <tr>
-                                    <th scope="row"
-                                        style={{ border: "1px solid #000" }}>23459</th>
+                                    <td scope="row"
+                                    className="td p-2">23459</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Maria Rojas</td>
+                                    className="td p-2">Maria Rojas</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Psiquiatra</td>
+                                    className="td p-2">Psiquiatra</td>
                                     <td
-                                        style={{ border: "1px solid #000", padding: "5px 10px" }}>#85334b8</td>
+                                    className="td p-2">#85334b8</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Especialidad Psicosis</td>
+                                    className="td p-2">Especialidad Psicosis</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>$45.000 por sesión</td>
+                                    className="td p-2">$45.000 por sesión</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>
+                                    className="td p-2">
                                         <div>
                                             <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
 
@@ -188,38 +186,38 @@ function TabSuperAdmin() {
                                 <tr
                                     style={{ backgroundColor: "#6495ed" }}>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }}>ID</th>
+                                    className="th p-2">ID</th>
                                     <th scope="col"
-                                        style={{ width: "15%", border: "1px solid #000" }}>Paciente</th>
+                                    className="th p-2">Paciente</th>
                                     <th scope="col"
-                                        sstyle={{ width: "20%", border: "1px solid #000" }}>Información</th>
+                                    className="th p-2">Información</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000" }}>Historial de citas</th>
+                                    className="th p-2">Historial de citas</th>
                                     <th scope="col"
-                                        sstyle={{ width: "15%", border: "1px solid #000" }}>Próximas citas</th>
+                                    className="th p-2">Próximas citas</th>
                                     <th scope="col"
-                                        style={{ width: "10%", border: "1px solid #000" }} >Pago</th>
+                                    className="th p-2">Pago</th>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }} ><i className="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></th>
+                                        className="th p-2" ><i className="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></th>
                                 </tr>
                             </thead>
                             <tbody className="table-group-divider"
                                 style={{ fontSize: "13px" }}>
                                 <tr>
-                                    <th scope="row"
-                                        style={{ border: "1px solid #000" }}>#9876</th>
+                                    <td scope="row"
+                                    className="td p-2">#9876</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Joe Opino</td>
+                                    className="td p-2">Joe Opino</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>joeopino@gmail.com</td>
+                                    className="td p-2">joeopino@gmail.com</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>13 de Agosto, 2022. Dr. Juanín Juan Harry</td>
+                                    className="td p-2">13 de Agosto, 2022. Dr. Juanín Juan Harry</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>16 de Agosto, 2022. 10:00 hrs</td>
+                                    className="td p-2">16 de Agosto, 2022. 10:00 hrs</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Realizado</td>
+                                    className="td p-2">Realizado</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>
+                                    className="td p-2">
                                         <div>
                                             <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
 
@@ -247,38 +245,38 @@ function TabSuperAdmin() {
                                 <tr
                                     style={{ backgroundColor: "#939794", color:"white" }}>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }}>ID</th>
+                                    className="th p-2">ID</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000" }}>Servicio</th>
+                                    className="th p-2">Servicio</th>
                                     <th scope="col"
-                                        sstyle={{ width: "20%", border: "1px solid #000" }}>Información</th>
+                                    className="th p-2">Información</th>
                                     <th scope="col"
-                                        style={{ width: "10%", border: "1px solid #000" }}>Tarifa</th>
+                                    className="th p-2">Tarifa</th>
                                     <th scope="col"
-                                        sstyle={{ width: "20%", border: "1px solid #000" }}>Especialistas disponibles</th>
+                                    className="th p-2">Especialistas disponibles</th>
                                     <th scope="col"
-                                        style={{ width: "20%", border: "1px solid #000" }} >Disponibilidad</th>
+                                    className="th p-2" >Disponibilidad</th>
                                     <th scope="col"
-                                        style={{ width: "5%", border: "1px solid #000" }} ><i className="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></th>
+                                    className="th p-2"><i className="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></th>
                                 </tr>
                             </thead>
                             <tbody className="table-group-divider"
                                 style={{ fontSize: "13px" }}>
                                 <tr>
-                                    <th scope="row"
-                                        style={{ border: "1px solid #000" }}>#9876</th>
+                                    <td scope="row"                                    
+                                    className="td p-2">#9876</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Terapia individual</td>
+                                    className="td p-2">Terapia individual</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Sesión de 45 minutos</td>
+                                    className="td  p-2">Sesión de 45 minutos</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>$20.000 por sesión</td>
+                                    className="td p-2">$20.000 por sesión</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Juan Bodoque</td>
+                                    className="td p-2">Juan Bodoque</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>Disponibilidad</td>
+                                    className="td p-2">Disponibilidad</td>
                                     <td
-                                        style={{ border: "1px solid #000" }}>
+                                    className="td p-2">
                                         <div className="botones">
                                             <input className="form-check-input " type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
 

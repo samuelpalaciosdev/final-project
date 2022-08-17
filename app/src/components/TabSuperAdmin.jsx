@@ -51,7 +51,7 @@ function TabSuperAdmin() {
                 <TabPane tabId="1">
                     <div className="container">
                         <br />
-                        <table className="table table-borderer table-sm">
+                        <table className="table table-borderer table-sm shadow">
                             <thead>
                                 <tr
                                     style={{backgroundColor: "#e8ffeb"  }}>
@@ -102,7 +102,7 @@ function TabSuperAdmin() {
                 <TabPane tabId="2">
                     <div className="container">
                         <br />
-                        <table className="table table-borderer table-sm">
+                        <table className="table table-borderer table-sm shadow">
 
                             <thead>
                                 <tr
@@ -180,7 +180,7 @@ function TabSuperAdmin() {
                 <TabPane tabId="3">
                     <div className="container">
                         <br />
-                        <table className="table table-borderer table-sm">
+                        <table className="table table-borderer table-sm shadow">
 
                             <thead>
                                 <tr
@@ -239,7 +239,7 @@ function TabSuperAdmin() {
                 <TabPane tabId="4">
                     <div className="container">
                         <br />
-                        <table className="table table-borderer table-sm">
+                        <table className="table table-borderer table-sm shadow">
 
                             <thead>
                                 <tr

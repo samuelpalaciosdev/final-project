@@ -1,4 +1,3 @@
-import "../styles/CardClient.css";
 
 const CardClient = ({ImgClient, imgLabel, NameClient, AgeClient, Review}) => {
   return (

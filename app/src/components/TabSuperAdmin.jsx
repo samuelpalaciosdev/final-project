@@ -263,7 +263,7 @@ function TabSuperAdmin() {
                             </thead>
                             {!!store.services &&
                                 store.services.length > 0 &&
-                                store.services.map((services, i) => (
+                                store.services.map((service, i) => (
                                     <TableDataServices {...service} key={i} index={service.id} />
                                 ))}
                         </table>

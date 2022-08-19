@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 
+
 import '../styles/TabSuperAdmin.css';
+import TableDataAppointment from './TableDataAppointment';
 import TableDataServices from './TableDataServices';
+import TableDataSpecialists from './TableDataSpecialists';
+
+
 
 function TabSuperAdmin() {
     const [activeTab, setActiveTab] = useState("0");
@@ -49,191 +54,134 @@ function TabSuperAdmin() {
                 </NavItem>
             </Nav>
             <TabContent activeTab={activeTab}>
+                {/* !!!!!!!!!!!!!!!!!! TABLA DE CITAS !!!!!!!!!!!!!!!!!!!!!!!*/}
                 <TabPane tabId="1">
                     <div className="container">
                         <br />
                         <table className="table table-borderer table-sm shadow">
                             <thead>
-                                <tr
-                                    style={{ backgroundColor: "#e8ffeb" }}>
-                                    <th scope="col"
-                                        className="th p-2">#Cita</th>
-                                    <th scope="col"
-                                        className="th p-2">Especialista</th>
-                                    <th scope="col"
-                                        className="th p-2">Paciente</th>
-                                    <th scope="col"
-                                        className="th p-2">Cita</th>
-                                    <th scope="col"
-                                        className="th p-2">Estado de cita</th>
-                                    <th scope="col"
-                                        className="th p-2" >Pago</th>
-                                    <th scope="col"
-                                        className="th p-2" ><i className="fa-solid fa-pen-to-square"></i> <i className="fa-solid fa-trash-can"></i> </th>
+                                <tr style={{ backgroundColor: "#E8FFEB" }}>
+                                    <th scope="col" className="th p-2">
+                                        #
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Fecha
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        ID Paciente
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Paciente
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        ID Doctor
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Doctor
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Servicio
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Invoice
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        <i className="fa-solid fa-pen-to-square"></i>{" "}
+                                        <i className="fa-solid fa-trash-can"></i>{" "}
+                                    </th>
                                 </tr>
                             </thead>
-                            <tbody className="table-group-divider"
-                                style={{ fontSize: "13px" }}>
-                                <tr>
-                                    <td scope="row"
-                                        className="td p-2">#5666</td>
-                                    <td
-                                        className="td p-2">Juanín Juan Harry</td>
-                                    <td
-                                        className="td p-2">Joe Opino</td>
-                                    <td
-                                        className="td p-2">13 de Agosto, 2022. 10:00 hrs</td>
-                                    <td
-                                        className="td p-2">Realizado</td>
-                                    <td
-                                        className="td p-2">Realizado</td>
-                                    <td
-                                        className="td p-2">
-                                        <div>
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            {!!store.appointments &&
+                                store.appointments.length > 0 &&
+                                store.appointments.map((appointment, i) => (
+                                    <TableDataAppointment {...appointment} key={i} index={appointment.id} />
+                                ))}
+
                         </table>
                     </div>
                 </TabPane>
 
+
+                {/* !!!!!!!!!!!!!!!!!! TABLA DE CLIENTES !!!!!!!!!!!!!!!!!!!!!!!*/}
                 <TabPane tabId="2">
                     <div className="container">
                         <br />
                         <table className="table table-borderer table-sm shadow">
-
                             <thead>
-                                <tr
-                                    style={{ backgroundColor: "#bcbbf8" }}>
-                                    <th scope="col"
-                                        className="th p-2">ID</th>
-                                    <th scope="col"
-                                        className="th p-2">Especialista</th>
-                                    <th scope="col"
-                                        className="th p-2">Especialidad</th>
-                                    <th scope="col"
-                                        className="th p-2">Código título</th>
-                                    <th scope="col"
-                                        className="th p-2">Datos generales</th>
-                                    <th scope="col"
-                                        className="th p-2">Tarifa</th>
-                                    <th scope="col"
-                                        className="th p-2"><i className="fa-solid fa-pen-to-square"></i> <i class="fa-solid fa-trash-can"></i></th>
+                                <tr style={{ backgroundColor: "#6495ED" }}>
+                                    <th scope="col" className="th p-2">
+                                        ID
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Paciente
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Email
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Historial de citas
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Próximas citas
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Pago
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        <i className="fa-solid fa-pen-to-square"></i>
+                                        <i className="fa-solid fa-trash-can"></i>
+                                    </th>
+                                   
                                 </tr>
                             </thead>
-                            <tbody className="table-group-divider"
-                                style={{ fontSize: "13px" }}>
-                                <tr>
-                                    <td scope="row"
-                                        className="td p-2">#4567</td>
-                                    <td
-                                        className="td p-2">Juan Bodoque</td>
-                                    <td
-                                        className="td p-2">Psicólogo</td>
-                                    <td
-                                        className="td p-2">#85494b8</td>
-                                    <td
-                                        className="td p-2">Enfoque psicoanalista</td>
-                                    <td
-                                        className="td p-2">$45.000 por sesión</td>
-                                    <td
-                                        className="td p-2">
-                                        <div>
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-                                        </div>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td scope="row"
-                                        className="td p-2">23459</td>
-                                    <td
-                                        className="td p-2">Maria Rojas</td>
-                                    <td
-                                        className="td p-2">Psiquiatra</td>
-                                    <td
-                                        className="td p-2">#85334b8</td>
-                                    <td
-                                        className="td p-2">Especialidad Psicosis</td>
-                                    <td
-                                        className="td p-2">$45.000 por sesión</td>
-                                    <td
-                                        className="td p-2">
-                                        <div>
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-                                        </div>
-                                    </td>
-
-                                </tr>
-                            </tbody>
+                            {!!store.clients &&
+                                store.clients.length > 0 &&
+                                store.clients.map((client, i) => (
+                                    <TableDataClient {...client} key={i} index={client.id} />
+                                ))}
                         </table>
                     </div>
                 </TabPane>
 
+                {/* !!!!!!!!!!!!!!!!!! TABLA DE ESPECIALISTAS !!!!!!!!!!!!!!!!!!!!!!!*/}
                 <TabPane tabId="3">
                     <div className="container">
                         <br />
                         <table className="table table-borderer table-sm shadow">
-
                             <thead>
-                                <tr
-                                    style={{ backgroundColor: "#6495ed" }}>
-                                    <th scope="col"
-                                        className="th p-2">ID</th>
-                                    <th scope="col"
-                                        className="th p-2">Paciente</th>
-                                    <th scope="col"
-                                        className="th p-2">Información</th>
-                                    <th scope="col"
-                                        className="th p-2">Historial de citas</th>
-                                    <th scope="col"
-                                        className="th p-2">Próximas citas</th>
-                                    <th scope="col"
-                                        className="th p-2">Pago</th>
-                                    <th scope="col"
-                                        className="th p-2" ><i className="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></th>
+                                <tr style={{ backgroundColor: "#BCBBF8" }}>
+                                    <th scope="col" className="th p-2">
+                                        ID
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Especialista
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Formación académica
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Experiencia laboral
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Especialización I 
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        Especialización II
+                                    </th>
+                                    <th scope="col" className="th p-2">
+                                        <i className="fa-solid fa-pen-to-square"></i>{" "}
+                                        <i className="fa-solid fa-trash-can"></i>
+                                    </th>
                                 </tr>
                             </thead>
-                            <tbody className="table-group-divider"
-                                style={{ fontSize: "13px" }}>
-                                <tr>
-                                    <td scope="row"
-                                        className="td p-2">#9876</td>
-                                    <td
-                                        className="td p-2">Joe Opino</td>
-                                    <td
-                                        className="td p-2">joeopino@gmail.com</td>
-                                    <td
-                                        className="td p-2">13 de Agosto, 2022. Dr. Juanín Juan Harry</td>
-                                    <td
-                                        className="td p-2">16 de Agosto, 2022. 10:00 hrs</td>
-                                    <td
-                                        className="td p-2">Realizado</td>
-                                    <td
-                                        className="td p-2">
-                                        <div>
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-
-                                            <input className="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."></input>
-                                        </div>
-                                    </td>
-
-                                </tr>
-
-
-                            </tbody>
-
+                            
+                            {!!store.specialists &&
+                                store.specialists.length > 0 &&
+                                store.specialists.map((specialist, i) => (
+                                    <TableDataSpecialists {...specialist} key={i} index={specialist.id} />
+                                ))}
 
                         </table>
-
                     </div>
                 </TabPane>
                 {/*inicio tabla servicios*/}
@@ -250,11 +198,11 @@ function TabSuperAdmin() {
                                     <th scope="col"
                                         className="th p-2">Servicio</th>
                                     <th scope="col"
-                                        className="th p-2">Información</th>
+                                        className="th p-2">Descripción</th>
                                     <th scope="col"
                                         className="th p-2">Tarifa</th>
                                     <th scope="col"
-                                        className="th p-2">Especialistas disponibles</th>
+                                        className="th p-2">Duración</th>
                                     <th scope="col"
                                         className="th p-2" >Disponibilidad</th>
                                     <th scope="col"

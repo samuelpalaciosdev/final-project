@@ -1,4 +1,4 @@
-const TableDataServices = (index, name, description, price) => {
+const TableDataServices = (index, name, description, price, time) => {
 
     return (
       <tbody
@@ -12,8 +12,8 @@ const TableDataServices = (index, name, description, price) => {
           <td className="td p-2">{name}</td>
           <td className="td  p-2">{description}</td>
           <td className="td p-2">{price}</td>
-          <td className="td p-2">Juan Bodoque</td>
-          <td className="td p-2">Disponibilidad</td>
+          <td className="td p-2">{time}</td>
+          <td className="td p-2">Disponible</td>
           <td className="td p-2">
             <div className="botones">
               <input

@@ -40,7 +40,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-4">
                   <Card
                     img="https://uploads-ssl.webflow.com/6165ed3d14364c7f8297fe2e/62558af721df57b8f5bc098b_steps-icon3.svg"
-                    imgLabel="specialists-icon"
+                    imgLabel="first-step-icon"
                     title="1. Ingresa tus datos"
                     description="Vamos a necesitar tu nombre, email, teléfono y medio de pago"
                   />
@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-4">
                   <Card
                     img="https://uploads-ssl.webflow.com/6165ed3d14364c7f8297fe2e/62558a4ebfab0b487ff53146_steps-icon1.svg"
-                    imgLabel="specialists-icon"
+                    imgLabel="second-step-icon"
                     title="2. Elige al especialista"
                     description="Puedes elegir dentro de los diferentes perfiles con los que contamos."
                   />
@@ -56,7 +56,7 @@ const Home = () => {
                 <div className="col-md-6 col-lg-4">
                   <Card
                     img="https://uploads-ssl.webflow.com/6165ed3d14364c7f8297fe2e/62558af73f29166024b10686_steps-icon2.svg"
-                    imgLabel="specialists-icon"
+                    imgLabel="third-step-icon"
                     title="3. Elige un horario"
                     description="Con base a los horarios disponibles, elige el que más te acomode."
                   />

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Context } from "../store/appContext";
 import "../styles/Card.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ServiceCardShowCase = ({ index, image, name, time, price }) => {
   const { store, actions } = useContext(Context);
@@ -13,7 +14,13 @@ const ServiceCardShowCase = ({ index, image, name, time, price }) => {
         id={index}
         style={{ width: "18rem" }}
       >
-        <img
+        {/* <img
+          src={image}
+          className="card-img-top mx-auto"
+          alt="service-icon"
+          style={{ height: "180px", width: "205px" }}
+        /> */}
+        <LazyLoadImage
           src={image}
           className="card-img-top mx-auto"
           alt="service-icon"

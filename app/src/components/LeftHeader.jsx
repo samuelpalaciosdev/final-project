@@ -1,3 +1,5 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 const LeftHeader = ({ img, imgLabel, title, title_highlight, description }) => {
   return (
     <>
@@ -5,7 +7,13 @@ const LeftHeader = ({ img, imgLabel, title, title_highlight, description }) => {
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-6 text-center">
-              <img
+              {/* <img
+                src={img}
+                className="img-fluid mx-auto"
+                alt={imgLabel}
+                style={{ maxWidth: "90%" }}
+              /> */}
+              <LazyLoadImage
                 src={img}
                 className="img-fluid mx-auto"
                 alt={imgLabel}

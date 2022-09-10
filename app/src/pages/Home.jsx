@@ -70,6 +70,7 @@ const Home = () => {
       {/* Left Header */}
       <LeftHeader
         img="https://uploads-ssl.webflow.com/6165ed3d14364c7f8297fe2e/6261a30dc74af77c2d5d2e9c_ilust-woman-waving-cropped-p-500.png"
+        imgLabel="Illustration of woman waving"
         title="Ahora más que nunca "
         title_highlight="estamos contigo."
         description="En este proceso la guía y contención emocional es fundamental. Brindar un servicio integral y personalizado de forma online a manos de expertos es nuestra misión."

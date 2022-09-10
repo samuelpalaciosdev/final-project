@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import "../styles/Footer.css";
 import Logo from "../img/nav-logo.png";
 import Logo2 from "../img/logo-head.png";
+import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -43,7 +45,7 @@ const Footer = () => {
                 aria-label="Twitter"
                 title="Twitter"
               >
-                <i className="fa-brands fa-twitter fa-lg"></i>
+                <AiOutlineTwitter size="1.375rem" />
               </a>
               <a
                 href="/#"
@@ -51,7 +53,7 @@ const Footer = () => {
                 aria-label="Instagram"
                 title="Instagram"
               >
-                <i className="fa-brands fa-instagram fa-lg"></i>
+                <AiOutlineInstagram size="1.375rem" />
               </a>
               <a
                 href="/#"
@@ -59,7 +61,7 @@ const Footer = () => {
                 aria-label="Linkedin"
                 title="Linkedin"
               >
-                <i className="fa-brands fa-linkedin-in fa-lg"></i>
+                <FaLinkedinIn size="1.375rem" />
               </a>
               <a
                 href="https://github.com/samuelpalaciosdev/final-project"
@@ -67,7 +69,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className=" me-1 text-reset social-media-icon fa-lg"
               >
-                <i className="fa-brands fa-github"></i>
+                <AiOutlineGithub size="1.375rem" />
               </a>
             </div>
           </div>

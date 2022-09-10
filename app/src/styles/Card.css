@@ -26,6 +26,16 @@
   transition: all 0.2s ease-out;
 }
 
+.service-text {
+  font-size: 0.9375rem;
+}
+
+@media screen and (min-width: 44.5rem) {
+  .service-text {
+    font-size: 1rem;
+  }
+}
+
 .pill {
   border-radius: 1rem;
   padding: 0.4em 1em;

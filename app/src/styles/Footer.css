@@ -1,10 +1,12 @@
 .footer-paragraph {
   font-size: 0.9rem;
 }
-.social-media-icon:hover .fa-brands {
+
+.social-media-icon:hover > * {
   color: hsl(216, 98%, 62%);
   transition: 0.3s;
 }
+
 .active-link {
   color: #0d6efd !important;
 }

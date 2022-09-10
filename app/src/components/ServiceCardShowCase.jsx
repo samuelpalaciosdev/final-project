@@ -16,12 +16,6 @@ const ServiceCardShowCase = ({ index, image, name, time, price }) => {
         id={index}
         style={{ width: "18rem" }}
       >
-        {/* <img
-          src={image}
-          className="card-img-top mx-auto"
-          alt="service-icon"
-          style={{ height: "180px", width: "205px" }}
-        /> */}
         <LazyLoadImage
           src={image}
           className="card-img-top mx-auto"
